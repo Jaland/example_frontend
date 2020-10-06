@@ -10,7 +10,7 @@ class App extends Component {
 
 
   componentDidMount() {
-    const baseUrl = (process.env.REACT_APP_FRONEND_URL === undefined) ? 'http://localhost:8080' : process.env.test_URL
+    const baseUrl = (process.env.REACT_APP_BACKEND_URL === undefined) ? 'http://localhost:8080' : process.env.test_URL
     fetch(baseUrl  + '/todos')
     .then(res => {
       return res.json()
